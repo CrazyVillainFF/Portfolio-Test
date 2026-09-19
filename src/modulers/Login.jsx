@@ -13,17 +13,17 @@ const login= () => {
             </Button>
             </Box>*/}
             <h2>Login</h2>
-            <Box sx={{mt:2}}>
+            <Box sx={{mt:1}}>
             <TextField variant='outlined' label="Email" placeholder='example@gmail.com'/>
             </Box>
-            <Box sx={{mt:2}}>
+            <Box sx={{mt:1}}>
             <TextField type="password" variant='outlined' label="Password" placeholder='Pass****'/>
             </Box>
-            <Box sx={{mt:1, ml:-8.5}}>
+            <Box sx={{mt:1, ml:-8.5, mb:1}}>
             <Button size="small" href="./register">Forget password?</Button>
             </Box>
-            <Button sx={{mt:2 , ml:0}} variant='contained'>Login</Button>
-            <Typography sx={{mt:5}}>You Don't have account? <Button variant='text' onClick={() =>navigate('/register')}>Register</Button></Typography>
+            <Button sx={{mt:1 , ml:0}} variant='contained'>Login</Button>
+            <Typography sx={{mt:24}}>You Don't have account? <Button variant='text' onClick={() =>navigate('/register')}>Register</Button></Typography>
 
             
                 {/*<input type="text" placeholder="Username"/>

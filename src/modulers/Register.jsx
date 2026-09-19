@@ -20,8 +20,8 @@ const Register = () =>{
             <Box sx={{mt:1, ml:-21.5}}>
                 <Button size='small' href='.//'>Help?</Button>
             </Box>
-            <Button sx={{mt:2}} variant='contained'>Register</Button>
-            <Typography sx={{mt:2}}>You already have account? <Button variant='text' onClick={() =>navigate('/')}>Login</Button></Typography>
+            <Button sx={{mt:-1}} variant='contained'>Register</Button>
+            <Typography sx={{mt:4}}>You already have account? <Button variant='text' onClick={() =>navigate('/')}>Login</Button></Typography>
             {/*<form>
                 <input type="text" placeholder="Username"/>
                 <input type="password" placeholder="Password"/>
