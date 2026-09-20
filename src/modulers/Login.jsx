@@ -1,17 +1,35 @@
 import{useEffect, useState} from "react"
 import {useNavigate} from "react-router-dom"
-import {Typography, Button, TextField, Box} from '@mui/material'
+import {Typography, Button, TextField, Box, AppBar, IconButton, Toolbar} from '@mui/material'
+import MenuIcon from '@mui/icons-material/Menu'
+import HomeIcon from '@mui/icons-material/Home';
 
 const login= () => {
     const navigate = useNavigate();
 
     return(
+    <>
+        <Box sx={{flexGrow:0}}>
+        <AppBar position='static'>
+            <Toolbar>
+                <IconButton
+                size='large'
+                edge='start'
+                color='inherit'
+                aria-label='menu'
+                sx={{mr:2}}>
+                    <HomeIcon onClick={()=> navigate('/home')}/>
+                </IconButton>
+                <Typography variant='h6' component="div" sx={{flexGrow: 1}}>
+                    Login
+                </Typography>
+                <Button color="inherit" onClick={() => navigate('/register')}>Register</Button>
+            </Toolbar>
+        </AppBar>
+    </Box>
+
+
         <div id="center">
-            {/*<Box sx={{mt:2}}>
-            <Button variant="outlined" onClick={() => setCount(count + 1)} disabled={count >= 10}>
-                Count {}
-            </Button>
-            </Box>*/}
             <h2>Login</h2>
             <Box sx={{mt:1}}>
             <TextField variant='outlined' label="Email" placeholder='example@gmail.com'/>
@@ -25,13 +43,8 @@ const login= () => {
             <Button sx={{mt:1 , ml:0}} variant='contained'>Login</Button>
             <Typography sx={{mt:24}}>You Don't have account? <Button variant='text' onClick={() =>navigate('/register')}>Register</Button></Typography>
 
-            
-                {/*<input type="text" placeholder="Username"/>
-                <input type="password" placeholder="Password"/>
-                <button onClick={handleLogin}>Login</button>
-                <p>You Don't Have Account? <button onClick={() => navigate('/register')} >Register</button></p> */}
-            
         </div>
+        </>
     );
 };
 
